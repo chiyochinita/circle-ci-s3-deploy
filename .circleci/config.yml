@@ -5,7 +5,7 @@ jobs:
   build_project:
     working_directory: ~/circle-ci-s3-deploy
     docker:
-      - image: cimg/node:17.4.0
+     - image: node:10.15.3
     steps:
       - checkout
       - run: 
