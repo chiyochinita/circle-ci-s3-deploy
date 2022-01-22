@@ -31,7 +31,6 @@ jobs:
           command: aws s3 sync ./dist/ s3://circle-ci-s3-deploy --delete
 
 workflows:
-  version: 2
   build:
     jobs:
       - build_project:
