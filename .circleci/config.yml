@@ -5,7 +5,8 @@ jobs:
   build_project:
     working_directory: ~/circle-ci-s3-deploy
     docker:
-     - image: node:10.15.3
+     - image: cimg/node:17.4.0
+     ##cimg 新しいものに変更
     steps:
       - checkout
       - run: 
@@ -49,3 +50,4 @@ workflows:
               ignore: /.*/
             tags:
               only: /.*/
+              #cli insatll後に再度試し
