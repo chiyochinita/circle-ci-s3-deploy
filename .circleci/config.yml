@@ -34,20 +34,10 @@ jobs:
 workflows:
   build:
     jobs:
-      - build_project:
-          filters:
-              branches:
-                ignore: /.*/
-              tags:
-                only: /.*/
+      - build_project
 
       - deploy_project:
           requires:
             - build_project
           context: aws-context
-          filters:
-            branches:
-              ignore: /.*/
-            tags:
-              only: /.*/
-              #cli insatll後に再度試し
+          
